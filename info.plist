@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alfredapp.ahalbert.dieroller</string>
+	<key>connections</key>
+	<dict>
+		<key>4F530B1F-E0A2-4789-9B7D-32A0048040D5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>54934463-B5DB-4214-BB11-43B9441080F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Armand Halbert</string>
+	<key>description</key>
+	<string>Generate Random Numbers</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Die Roller</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>roll</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Rolling...</string>
+				<key>script</key>
+				<string>/usr/bin/python3 dieroller.py $@</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Roll a die</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4F530B1F-E0A2-4789-9B7D-32A0048040D5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>54934463-B5DB-4214-BB11-43B9441080F5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Alfred Die Roller
+
+This is a workflow for rolling dice and operating on them, suited to Tabletop Games like *Dungeons &amp; Dragons* and *Shadowrun*. Copies result to clipboard. 
+
+## Actions
+
+* `X` - Roll one X sided die
+* `XdY` - Roll X number of Y-sided dice
+* `sum` - Sum dice after rolling
+* `topX` - Get X largest dice
+* `bottomX` - Get X smallest dice
+* `&gt;4` - Get number of dice &gt; 4
+* `+x/+y` Add +x and +y to the first two dice rolled 
+
+
+## Examples
+
+### Roll 3d6
+
+`roll 3d6`
+
+![Roll Dice](./img/roll.png)
+
+### Sum Result
+
+`roll 3d6 sum`
+
+![Sum Dice](./img/sum.png)
+
+
+### Roll 4d6, drop lowest
+
+`roll 4d6 top3`
+
+![Drop Dice](./img/drop.png)
+
+
+
+### Get number of dice &gt; 4
+
+`roll 10d6 &gt;4`
+
+![Hits](./img/hits.png)
+
+
+### Modify dice
+
+`roll 1d20 +5`
+
+![Math](./img/math1.png)
+
+
+`roll 2d20 +3/*5`
+
+![Math](./img/math2.png)
+
+
+### Combine 
+
+
+`roll 5d20 top2 sum`
+
+![Math](./img/combine.png)</string>
+	<key>uidata</key>
+	<dict>
+		<key>4F530B1F-E0A2-4789-9B7D-32A0048040D5</key>
+		<dict>
+			<key>xpos</key>
+			<real>70</real>
+			<key>ypos</key>
+			<real>455</real>
+		</dict>
+		<key>54934463-B5DB-4214-BB11-43B9441080F5</key>
+		<dict>
+			<key>xpos</key>
+			<real>290</real>
+			<key>ypos</key>
+			<real>455</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
