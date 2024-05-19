@@ -182,9 +182,11 @@ This is a workflow for rolling dice and operating on them, suited to Tabletop Ga
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array/>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>1.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/ahalbert/alfred-dieroller/</string>
 </dict>
 </plist>
